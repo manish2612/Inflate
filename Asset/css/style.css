@@ -5,12 +5,17 @@
 *{
     box-sizing: border-box;
 }
+html {
+  position: relative;
+  min-height: 100%;
+}
 body{
     background: url('../img/bg_texture.jpg');
     font-family: 'WebFont';
     margin: 0;
     padding: 0;
     padding-top: 68px;
+    margin-bottom: 90px;
 }
 img,img:hover{
     image-rendering: crisp-edges;             /* FUCK SMOOTHING, GIVE ME SPEED  */
@@ -51,6 +56,14 @@ header a.title{
     width: 100%;
     box-sizing: border-box;
     padding: 0px 15px;
+}
+
+.js-note{
+    font-family: 'verdana';
+    background: #F6F4EC;
+    padding: 10px 15px;
+    color: #9D3632;
+    border-bottom: 1px solid #EAD9D8;
 }
 .download{
     background: #9D3632;
@@ -181,25 +194,55 @@ code{
     background: #f9f9f9
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-family: 'verdana';
+  font-size: 14px;
+  height: 52px;
+  background-color: #C0413C;
+  padding: 18px;
+  color: #fff;
+}
+.footer a{
+    color: #FFEBB9;
+    text-decoration: none;
+}
 @media (max-width: 768px) {
     .visible-grid{
         display: none;
     }
+    .js-note{
+        display: block;
+    }
     .help table{
         width: 100%
+    }
+    .usage{
+        margin-top: 20px;
     }
 }
 @media (min-width: 768px) {
     .visible-grid{
         display: none;
     }
+    .js-note{
+        display: block;
+    }
     .help table{
         width: 100%
+    }
+    .usage{
+        margin-top: 20px;
     }
 }
 @media (min-width: 992px) {
     .visible-grid{
         display: block;
+    }
+    .js-note{
+        display: none;
     }
     .help table{
         width: 60%
@@ -209,6 +252,9 @@ code{
     .visible-grid{
         display: block;
     }
+    .js-note{
+        display: none;
+    }
     .container{
         width: 1170px;
     }
@@ -216,3 +262,5 @@ code{
         width: 50%
     }
 }
+
+
