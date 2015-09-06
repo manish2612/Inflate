@@ -4,9 +4,8 @@
 
         // Establish our default settings w, h, wrapper, elements, d
         var settings = $.extend({
-            width: 200,
-            height: 200,
             elements: null,
+            easing: Back.easeOut,
             scale: 30
         }, options);
         //h.w = settings.width, h.h = settings.height, h.wrap = settings.wrapper, h.elms = settings.elements, this.p = [], this.dec = settings.scale;
@@ -572,7 +571,7 @@
             
             BLEND.generateGrid = function() {
                 var h = this;
-                h.w = settings.width, h.h = settings.height, h.elms = settings.elements, this.p = [], this.dec = settings.scale;
+                h.w = $(settings.elements).width(), h.h = $(settings.elements).height(), h.elms = settings.elements, this.p = [], this.dec = settings.scale;
                 var r = Math.floor(wrapper.outerWidth() / h.w), l = Math.floor(wrapper.outerWidth() / h.w + 1), a = Math.ceil(wrapper.outerHeight() / h.h) + 1, o = l * a;
                 for (i = 0; o > i; i++) {
                     var u = {x: Math.floor(i % l) * h.w, y: Math.floor(i / l) * h.h, x2: Math.floor(i % l) * h.w, y2: Math.floor(i / l) * h.h};
@@ -600,11 +599,11 @@
                         var m = this;
 
                         $(m.el).click(function() {
-                            TweenMax.killTweensOf(m.p1), TweenMax.killTweensOf(m.p2), TweenMax.killTweensOf(m.p3), TweenMax.killTweensOf(m.p4), TweenMax.to(m.p1, .8, {x: m.p1.x2, y: m.p1.y2, ease: Back.easeOut}), TweenMax.to(m.p2, .8, {x: m.p2.x2, y: m.p2.y2, ease: Back.easeOut}), TweenMax.to(m.p3, .8, {x: m.p3.x2, y: m.p3.y2, ease: Back.easeOut}), TweenMax.to(m.p4, .8, {x: m.p4.x2, y: m.p4.y2, ease: Back.easeOut})
+                            TweenMax.killTweensOf(m.p1), TweenMax.killTweensOf(m.p2), TweenMax.killTweensOf(m.p3), TweenMax.killTweensOf(m.p4), TweenMax.to(m.p1, .8, {x: m.p1.x2, y: m.p1.y2, ease: settings.easing}), TweenMax.to(m.p2, .8, {x: m.p2.x2, y: m.p2.y2, ease: settings.easing}), TweenMax.to(m.p3, .8, {x: m.p3.x2, y: m.p3.y2, ease: settings.easing}), TweenMax.to(m.p4, .8, {x: m.p4.x2, y: m.p4.y2, ease: settings.easing})
                         }), $(m.el).hover(function() {
-                            TweenMax.killTweensOf(m.p1), TweenMax.killTweensOf(m.p2), TweenMax.killTweensOf(m.p3), TweenMax.killTweensOf(m.p4), TweenMax.to(m.p1, .3, {x: m.p1.x2 - h.dec, y: m.p1.y2 - h.dec, ease: Back.easeOut}), TweenMax.to(m.p2, .3, {x: m.p2.x2 + h.dec, y: m.p2.y2 - h.dec, ease: Back.easeOut}), TweenMax.to(m.p3, .3, {x: m.p3.x2 + h.dec, y: m.p3.y2 + h.dec, ease: Back.easeOut}), TweenMax.to(m.p4, .3, {x: m.p4.x2 - h.dec, y: m.p4.y2 + h.dec, ease: Back.easeOut})
+                            TweenMax.killTweensOf(m.p1), TweenMax.killTweensOf(m.p2), TweenMax.killTweensOf(m.p3), TweenMax.killTweensOf(m.p4), TweenMax.to(m.p1, .3, {x: m.p1.x2 - h.dec, y: m.p1.y2 - h.dec, ease: settings.easing}), TweenMax.to(m.p2, .3, {x: m.p2.x2 + h.dec, y: m.p2.y2 - h.dec, ease: settings.easing}), TweenMax.to(m.p3, .3, {x: m.p3.x2 + h.dec, y: m.p3.y2 + h.dec, ease: settings.easing}), TweenMax.to(m.p4, .3, {x: m.p4.x2 - h.dec, y: m.p4.y2 + h.dec, ease: settings.easing})
                         }, function() {
-                            TweenMax.killTweensOf(m.p1), TweenMax.killTweensOf(m.p2), TweenMax.killTweensOf(m.p3), TweenMax.killTweensOf(m.p4), TweenMax.to(m.p1, .8, {x: m.p1.x2, y: m.p1.y2, ease: Back.easeOut}), TweenMax.to(m.p2, .8, {x: m.p2.x2, y: m.p2.y2, ease: Back.easeOut}), TweenMax.to(m.p3, .8, {x: m.p3.x2, y: m.p3.y2, ease: Back.easeOut}), TweenMax.to(m.p4, .8, {x: m.p4.x2, y: m.p4.y2, ease: Back.easeOut})
+                            TweenMax.killTweensOf(m.p1), TweenMax.killTweensOf(m.p2), TweenMax.killTweensOf(m.p3), TweenMax.killTweensOf(m.p4), TweenMax.to(m.p1, .8, {x: m.p1.x2, y: m.p1.y2, ease: settings.easing}), TweenMax.to(m.p2, .8, {x: m.p2.x2, y: m.p2.y2, ease: settings.easing}), TweenMax.to(m.p3, .8, {x: m.p3.x2, y: m.p3.y2, ease: settings.easing}), TweenMax.to(m.p4, .8, {x: m.p4.x2, y: m.p4.y2, ease: settings.easing})
                         })
                     }, update: function() {
                         var e = this;

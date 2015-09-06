@@ -10,7 +10,7 @@ body{
     font-family: 'WebFont';
     margin: 0;
     padding: 0;
-    padding-top: 120px
+    padding-top: 68px;
 }
 img,img:hover{
     image-rendering: crisp-edges;             /* FUCK SMOOTHING, GIVE ME SPEED  */
@@ -33,6 +33,18 @@ header a.title{
     color: #fff;
     font-size: 20pt;
     text-decoration: none;
+}
+.js-info{
+    background: #B33F3A;
+    color: #fff;
+    font-family: 'verdana';
+    font-size: 1em;
+    line-height: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px; 
+}
+.visible-grid{
+    margin-top: 50px
 }
 .container{
     margin: 0 auto;
@@ -93,7 +105,9 @@ ul.tiles li img{
 .float-left{
     float: left
 }
-
+.usage{
+    margin-top: 50px;
+}
 .help{
     background: #fff;
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.15);
@@ -149,6 +163,10 @@ code{
     margin-top: 15px;
     padding: 0px;
     width: 50%;
+}
+.help table a{
+    color: #247ed8;
+    text-decoration: none;
 }
 .help table tr:nth-child{
     background: #f5f5f5;
