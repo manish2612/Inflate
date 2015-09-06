@@ -1,0 +1,200 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="inflate,inflate.js,inflateJS,jquery,javascript">
+        <meta itemprop="description" name="description" content="Inflate JS is library for creating cool mouse over inflating effect.">
+
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Inflate JS"/>
+        <meta property="og:description" content="Inflate JS is library for creating cool mouse over inflating effect.">
+        
+        
+        <link href="Asset/img/fav.png" rel="shortcut icon" type="image/x-icon">
+        <!--        <link href="Asset/bootstrap-3.3.5-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">-->
+        <link href="Asset/css/style_1.css" type="text/css" rel="stylesheet">
+        <link href="Asset/css/hybrid.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <title>Inflate JS</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="float-right">
+                    <a href="#" class="download"><i class="fa fa-github"></i> &nbsp;Github</a>
+                </div>
+                <a href="#" class="title">InflateJS</a>
+            </div>
+        </header>
+        <section class="visible-grid">
+            <div class="wrapper">
+                <ul class="tiles">
+                    <li class="tile">
+                        <img src="Asset/img/Images/Cute-Agnes-Gru-Despicable-Me.jpg">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/Despicable-Me-Minions-Wallpaper-For-Android-2.jpg" style="margin-left: -105px;">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/How-to-Train-Your-Dragon-image-how-to-train-your-dragon-36801794-800-430.jpg" style="margin-left: -100px;width: 500px">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/Kung-Fu-Panda-3.jpg" style="margin-left: -70px;">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/JABSG.jpg" style="margin-left: -100px;width: 500px">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/Kungfupanda4.jpg" style="margin-left: -150px;width: 590px">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/NE7UrNsWkAKxbb_1_a.jpg" style="margin-left: 0px;width: 480px">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/Tigress-cub.jpg" style="margin-left: -80px;width: 600px">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/kfp-3-reasons-kung-fu-panda-3-is-important.jpeg" style="margin-left: -80px;">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/how_to_train_your_dragon_2-wallpaper-hd1.jpg" style="margin-left: -80px;">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/Cute-Agnes-Gru-Despicable-Me.jpg">
+                    </li>
+                    <li class="tile">
+                        <img src="Asset/img/Images/Despicable-Me-Minions-Wallpaper-For-Android-2.jpg" style="margin-left: -105px;">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="help">
+                    <div class="title">
+                        Installation
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            Include the core library and <code>TweenMax.js</code> in your HTML file after jquery library:
+                        </div>
+                        <div class="row code">
+                            <div>&lt;script src=&quot;jquery-1.11.1.min.js&quot;&sol;&gt; &lt;&sol;script&gt;</div>
+                            <div>&lt;script src=&quot;TweenMax.js&quot;&sol;&gt; &lt;&sol;script&gt;</div>
+                            <div>&lt;script src=&quot;Inflate.js&quot;&sol;&gt; &lt;&sol;script&gt;</div>
+                        </div>
+                        <div class="row">
+                            And you're ready to go!
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="help">
+                    <div class="title">
+                        Usage
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="sec-h">The Markup</div>
+                            For markup we'll have <code>&lt;ul&gt;</code> with class "tile-wrapper" which contains <code>&lt;li&gt;</code> with class "tile" styled as square tile. 
+                            You could as well use <code>&lt;div&gt;</code>
+                            here which would need different markup.
+                        </div>
+                        <div class="row code">
+                            <pre>
+&lt;ul class=&quot;tile-wrapper&quot;&gt;
+    &lt;li class=&quot;tile&quot;&gt;
+        ...
+    &lt;&sol;li&gt;
+    ...
+&lt;&sol;ul&gt;
+                            </pre>
+                        </div>
+                        <div class="row">
+                            Let's style all this.
+                            <br><br>
+                            <div class="sec-h">The CSS</div>
+                            We'll start with grid which will contain 4 columns. Lets center it and and set width
+                            960px since we'll be creating tiles each of width 240px. To make this grid responsive we'll take care
+                            of smaller screen sizes in our media queries later on:
+                        </div>
+                        <div class="row code">
+                            <pre>
+.tile-wrapper{
+    list-style: none;
+    margin: 0 auto;
+    width: 960px;
+}
+                            </pre>
+                        </div>
+                        <div class="row">
+                            The tiles should float left and we'll give them width of 240px and height of 240px. In order to make 
+                            inflating tiles work we have to set its <code>transform-origin</code> to 0px:
+                        </div>
+                        <div class="row code">
+                            <pre>
+.tile{
+    float: left;
+    height:240px;
+    transform-origin: 0px 0px;
+    width:240px;
+}
+                            </pre>
+                        </div>
+                        <div class="row">
+                            That's all the style! Let's move over to the Javascript.
+                            <br><br>
+                            <div class="sec-h">The Javascript</div>
+                            Here's where we make stuff happen. As all HTML and CSS is in place, all we have to do is call
+                            inflate function to start inflating tiles effect.
+                        </div>
+                        <div class="row code">
+                            <pre>
+$(".tile-wrapper").inflate({
+    width: 240,
+    height: 240,
+    elements: ".tile",
+    scale: 40
+});
+                            </pre>
+                        </div>
+                        <div class="row last">
+                            Lets go over what these vars do.
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>width</td>
+                                        <td>width of tile in <code>px</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>height</td>
+                                        <td>height of tile in <code>px</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>elements</td>
+                                        <td>selector for tile</td>
+                                    </tr>
+                                    <tr>
+                                        <td>scale</td>
+                                        <td>scale amout for tile</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="Asset/js/jquery-1.11.1.min.js"></script>
+        <script src="Asset/js/TweenMax.js"></script>
+        <script src="Asset/js/plugin.js"></script>
+        <script src="Asset/js/highlight.pack.js"></script>
+        <script src='Asset/js/index.js'></script>
+    </body>
+</html>

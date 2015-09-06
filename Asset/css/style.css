@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'WebFont';
+    src: url('../font/x.ttf') /* Safari, Android, iOS */
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background: url('../img/bg_texture.jpg');
+    font-family: 'WebFont';
+    margin: 0;
+    padding: 0;
+    padding-top: 120px
+}
+img,img:hover{
+    image-rendering: crisp-edges;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+header{
+    background: #C0413C;
+    padding: 15px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+header a.title{
+    color: #fff;
+    font-size: 20pt;
+    text-decoration: none;
+}
+.container{
+    margin: 0 auto;
+    /*padding: 0px 15px;*/
+    width: 1000px;
+}
+.download{
+    background: #9D3632;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 15pt;
+    padding: 6px 20px;
+    position: relative;
+    text-decoration: none;
+    top: 5px;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 1000px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+}
+ul.tiles{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+}
+ul.tiles li{
+    cursor: pointer;
+    float: left;
+    height : 250px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+    transform-origin: 0px 0px;
+    -webkit-transform-origin: 0px 0px;
+    -moz-transform-origin: 0px 0px;
+    -o-transform-origin: 0px 0px;
+}
+ul.tiles li img{
+    width: 400px;
+}
+
+.float-right{
+    float: right
+}
+.float-left{
+    float: left
+}
+
+.help{
+    background: #fff;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+.help .title{
+    background: #F6F4EC;
+    border-bottom: 2px solid #C0413C;
+    color: #C0413C;
+    font-size: 1.6em;
+    padding: 10px 15px;
+}
+.sec-h{
+    color: #0095DD;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+code{
+    background: #f3f3f3;
+    color: #C0413C;
+    padding: 2px 4px;
+    font-size: 1.2em;
+}
+.help .content{
+    padding: 10px 15px;
+}
+.help .content .row{
+    color: #737373;
+    font-family: 'verdana';
+    font-size: 1em;
+    line-height: 23px;
+    padding: 9px 0px;
+    margin-bottom: 10px;
+}
+.help .content .row.last{
+    margin-bottom: 0px;
+}
+.help .content .row.code{
+    font-size: 0.9em;
+    line-height: 18px;
+    padding:10px 12px;
+}
+.help .content .row.code pre{
+    font-size: 1.31em;
+    margin: 0px;
+}
+.help table{
+    border: 1px solid #e7e7e7;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 15px;
+    padding: 0px;
+    width: 50%;
+}
+.help table tr:nth-child{
+    background: #f5f5f5;
+    padding: 0px;
+    margin: 0;
+}
+.help table tr td{
+    padding: 8px 12px;
+    margin: 0;
+}
+.help table tr:nth-child(2n+1){
+    background: #f9f9f9
+}
+
+@media (max-width: 768px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
