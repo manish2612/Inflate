@@ -205,7 +205,7 @@ code{
   padding: 18px;
   color: #fff;
 }
-.footer a{
+.footer a,.js-info a{
     color: #FFEBB9;
     text-decoration: none;
 }
